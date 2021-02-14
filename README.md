@@ -9,6 +9,7 @@ Imaginary radio station called Proper. This radio is want to play bunch of songs
 - Docker Compose
 - Liquidsoap (run through Docker)
 - Stereo Tool (command line version) 64 bit
+- Some songs loaded on the songs folder
 
 ## How to run
 Run this Docker Compose command.
