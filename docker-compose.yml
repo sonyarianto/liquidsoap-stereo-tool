@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  proper-radio:
+    container_name: proper-radio
+    command:
+      - liquidsoap
+      - /proper-radio/proper.liq
+    image: savonet/liquidsoap:master
+    volumes:
+      - ./proper.liq:/proper-radio/proper.liq
+      - ./proper-song-files:/proper-radio/songs-files
+      - ./stereo_tool_cmd_64:/proper-radio/stereo_tool_cmd_64
+      - ./proper-stereo-tools-config.sts:/proper-radio/proper-stereo-tools-config.sts
+    ports:
+      - 127.0.0.1:8585:8585
+    networks:
+      - proper-radio-network
+
+networks:
+  proper-radio-network:
