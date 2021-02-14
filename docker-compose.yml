@@ -8,9 +8,9 @@ services:
     image: savonet/liquidsoap:master
     volumes:
       - ./proper.liq:/proper-radio/proper.liq
-      - ./proper-song-files:/proper-radio/songs-files
+      - ./proper-songs-files:/proper-radio/songs-files
       - ./stereo_tool_cmd_64:/proper-radio/stereo_tool_cmd_64
-      - ./proper-stereo-tools-config.sts:/proper-radio/proper-stereo-tools-config.sts
+      - ./proper-stereo-tool-config.sts:/proper-radio/proper-stereo-tool-config.sts
     ports:
       - 127.0.0.1:8585:8585
     networks:
