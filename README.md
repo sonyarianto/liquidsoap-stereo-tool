@@ -7,7 +7,7 @@ Imaginary radio station called Proper. This radio want to play bunch of songs th
 ## Ingredients
 - Docker
 - Docker Compose
-- Liquidsoap (run through Docker)
+- Liquidsoap (run through Docker), I am using `savonet/liquidsoap:master` image.
 - Stereo Tool (command line version, a file called `stereo_tool_cmd_64`) 64 bit (available at https://www.stereotool.com/download/)
 - Some songs loaded on the songs folder, in this case folder name is `proper-songs-files`
 - An Icecast server (you can use Zeno infrastructure)
