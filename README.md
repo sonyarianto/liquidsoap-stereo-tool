@@ -10,6 +10,7 @@ Imaginary radio station called Proper. This radio want to play bunch of songs th
 - Liquidsoap (run through Docker)
 - Stereo Tool (command line version) 64 bit
 - Some songs loaded on the songs folder
+- An Icecast server (you can use Zeno infrastructure)
 
 ## How to run
 Run this Docker Compose command.
