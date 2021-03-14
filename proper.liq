@@ -2,16 +2,16 @@ set("init.allow_root",true)
 
 set("server.telnet", true)
 set("server.telnet.port", 8585)
-set("server.telnet.bind_addr", "0.0.0.0")
+set("server.telnet.bind_addr", "127.0.0.1")
 
-songs = playlist(
+songs = crossfade(playlist(
                 id="songs", 
                 mode="randomize", 
                 reload=120, 
                 reload_mode="watch", 
-                "/proper-radio/songs-files")
+                "/proper-radio/songs-files"))
 
-final = pipe(process='/proper-radio/stereo_tool_cmd_64 - - -s /proper-radio/proper-stereo-tool-config.sts -q -k "YOUR_STEREO_TOOL_LICENSE"', songs)
+final = pipe(replay_delay=1.0, process='/proper-radio/stereo_tool_cmd_64 - - -s /proper-radio/proper-stereo-tool-config.sts -q -k "YOUR_STEREO_TOOL_LICENSE"', songs)
 
 output.icecast(
     id="output_320_normal", 
